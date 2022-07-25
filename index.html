@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--
-    <script async src="https:/www.googletagmanager.com/gtag/js?id=G-DJC1QLRWF0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      
-      gtag('js', new Date());
-      gtag('set',{
-        cookie_domain: 'decrochons-macron.github.io',
-        cookie_flags: 'SameSite=None;Secure',
-      });
-      gtag('config', 'G-DJC1QLRWF0', {
-        cookie_domain: 'decrochons-macron.github.io',
-        cookie_flags: 'SameSite=None;Secure',
-      });
-    </script>
-    -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start':
+              new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K9W66H5');</script>
+    <!-- End Google Tag Manager -->    
     <title>Les chemins de soi</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -37,7 +31,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">    
     -->
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css?v=18" crossorigin="anonymous">
@@ -51,6 +45,10 @@
     -->
   </head>
   <body id="body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9W66H5"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->    
     <div class="container main">
       <div class="box">
         <div id="header">
@@ -89,23 +87,23 @@
       <div id="footer">
         <div class="container">          
           <div class="link-wrapper">
-          <div class="links">
+            <div class="links">
               <a class="item contact" target="_blank" href="mailto:lescheminsdesoi70@gmail.com"><i class="fa-2x fa fa-envelope"></i> Contactez-nous</a>
               <a class="item" class="mobile" data-ios="fb://page/?id=" data-android="intent://page/290430641549558?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end" target="_blank" title="Facebook" href="https://www.facebook.com/XXXX/"><i class="fa-2x fab fa-facebook-f"></i></a>
               <a class="item" class="mobile" data-ios="instagram://user?username=&igshid=" data-android="intent://www.instagram.com/xxxxx/#Intent;package=com.instagram.android;scheme=https;end?igshid=xxxxx" target="_blank" title="Instagram : Les chemins de soi" href="https://instagram.com/XXXX?igshid=XXXXX"><i class="fa-2x fab fa-instagram"></i></a>
               <a class="item" class="mobile" data-ios="twitter://user?screen_name=" data-android="intent://twitter.com/XXXXX#Intent;package=com.twitter.android;scheme=https;end" target="_blank" href="https://twitter.com/XXXXX"><i class="fa-2x fab fa-twitter"></i></a>
-          </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <script>
-      //$('#header').load('pages/header.html', function() {
-      global.updateLinks("header")
-      //});
-      //$('#footer').load('pages/footer.html', function() {
-      global.updateLinks("footer")
-      //});
+  //$('#header').load('pages/header.html', function() {
+  global.updateLinks("header")
+  //});
+  //$('#footer').load('pages/footer.html', function() {
+  global.updateLinks("footer")
+  //});
     </script>
   </body>
 </html>
