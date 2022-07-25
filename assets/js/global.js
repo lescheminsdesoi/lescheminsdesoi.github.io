@@ -121,7 +121,6 @@ global.getPage = function (page) {
     global.gotoAnchor = bits[1];
   }
 
-  /*
   if (typeof (gtag) != 'undefined') {
     console.log("Send event to Google");
     gtag('event', "page", {
@@ -129,7 +128,7 @@ global.getPage = function (page) {
       'event_label': "clicked"
     });
   }
-  */
+
   global.get(page)
 }
 
