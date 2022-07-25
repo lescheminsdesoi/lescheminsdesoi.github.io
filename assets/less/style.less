@@ -1,0 +1,148 @@
+@primary-bg: #FBF0F8;
+@primary-color: #CF374A;
+
+body {line-height:120%;}
+.container.main {
+  //
+}
+  h3 {
+    color:@primary-color; text-align:center;
+  }
+
+#header {
+  position:fixed; left:0;top:0; width:100%;
+  text-align:center; z-index:2;
+  .navbar-brand {color:@primary-color;}
+  nav.bg-light {
+    background:@primary-bg!important;
+    border-bottom:2px solid @primary-color;
+  }
+}
+#footer {
+  position:fixed; left:0;bottom:0; width:100%; background:black; color:white;
+  text-align:center; z-index:3;
+  .link-wrapper {
+    display:inline-block;
+    .links {
+      line-height:30px; padding:15px 0;
+      text-align:center;
+      display:flex; flex-direction:row; flex-wrap: nowrap;
+      .item {
+        margin:0 10px;  
+        &.contact {
+          display:flex; flex-direction:row;
+          align-items: center; margin-right:10px;
+          i {margin-right:5px;}
+        }
+      }    
+    }
+  }
+}
+.stars {
+  margin-top:20px;
+  .star {
+    position:relative; padding-left:20px; line-height:100%; margin-bottom:4px; font-size:14px; color:#666;
+    .item {color:darkblue; font-weight: bold; position: absolute; top:0; left:0;}
+  }
+}
+.starin {color:darkblue; font-weight: bold;}
+.final-remark {
+  margin:30px 0; font-size:18px; font-weight:bold; text-align:center;
+}
+#pages {
+  border:1px solid @primary-bg;
+  padding:70px 0 80px 0; background:rgba(240,240,240,0.3);
+  min-height: calc(100vh - 0px);
+  ul {
+    margin:10px 0; padding-left:5px;
+    li {
+      margin:10px;
+      list-style-image: url("../images/bullet.jpg");
+    }
+  }
+}
+.page-accueil {
+  h1 {margin:15px 10px 0 10px; line-height:normal; text-align:center; color:@primary-color;}
+  .address {color:#666; position:relative; text-align:center; margin-bottom:15px;}
+  .propose {margin:15px 0; text-align:center;}
+  .central {    
+    .block-wrapper {
+      background:@primary-bg url("../images/logo.jpg") no-repeat right top;
+      background-size:contain;
+      padding:15px 0;
+      .block {
+        padding:5px 15px; border-radius:8px; max-width:700px;
+        margin-bottom:25px;
+        .title {font-weight:bold; font-size:18px;}
+      }
+    }
+    .image {
+      img {max-width:100%; }
+    }
+  }
+.instructors {
+  margin:40px 15px; border:1px solid #ddd;
+  max-width:100%; width: auto; background:white;
+  line-height:100%;
+  thead {
+    th {font-weight: normal;}
+  }
+  thead th {border:none;}
+  .person {font-weight:bold; white-space: nowrap; min-width:130px;}
+}
+}
+.number {
+  text-align:right;
+}
+
+.page-tarifs, .page-contact {
+  padding:15px;
+}
+.page-tarifs {
+  .tarif-table {
+    margin-top:30px;
+  }
+  tr.obligatoire {
+    td {background:#aaa;}
+  }
+}
+.page-contact {
+  .block-wrapper {
+    text-align:center;
+    .block {
+      max-width:600px; text-align:left;
+      margin:40px auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  #footer {
+    .link-wrapper {
+      .links {
+        .item {
+          margin:0 5px;
+          i.fa-2x {font-size:14px;}
+        }
+      }
+    }    
+  }
+  .page-accueil {
+    h1{font-size:17px; font-weight:bold;}
+    .central {    
+      .block-wrapper {
+        background:@primary-bg;
+      }
+    }
+    .instructors {
+      margin:30px 10px;
+      td {
+        xfont-size:14px;
+        display:block;
+      }
+      .person {border-bottom:none; padding-bottom:10px;}
+      .skill {border-top:none; padding-top:0;}
+    }
+  }
+}
