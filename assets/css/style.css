@@ -239,6 +239,9 @@ h3 {
 .page-presentation .block {
   min-height: 100px;
 }
+.page-presentation .block .item {
+  margin-bottom: 25px;
+}
 @media screen and (max-width: 1200px) {
   .container {
     width: 100%;
