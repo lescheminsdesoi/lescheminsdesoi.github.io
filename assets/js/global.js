@@ -80,9 +80,21 @@ global.get = function (name) {
       global.updateLinks(name)
       global.setMore(name)
       global.scrollToAnchor();
+      global.updateTitles(name);
     })
   }
 
+
+}
+global.updateTitles = function (name) {
+  let year = new Date().getFullYear();
+  switch (name) {
+    case 'tarifs':
+      let title = $(".page-tarifs h3").html();
+      title += " " + year;
+      $(".page-tarifs h3").html(title)
+      break;
+  }
 }
 
 global.setMore = function (name) {

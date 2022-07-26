@@ -226,6 +226,10 @@ h3 {
 .page-contact .address .subtitle {
   color: gray;
 }
+.page-contact iframe.streetmap {
+  width: 100%;
+  aspect-ratio: auto 1.5;
+}
 /* +--------------------------+
    |
    | PAGE Presentation
