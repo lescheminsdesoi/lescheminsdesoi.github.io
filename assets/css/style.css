@@ -5,12 +5,15 @@ h3 {
   color: #CF374A;
   text-align: center;
 }
+.nobr {
+  white-space: nowrap;
+}
 #header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
   z-index: 2;
 }
 #header .navbar-brand {
@@ -119,16 +122,20 @@ h3 {
    |
    +--------------------------+ */
 .page-accueil h1 {
-  margin: 15px 10px 0 10px;
+  margin: 15px 10px 15px 10px;
   line-height: normal;
   text-align: center;
   color: #CF374A;
+  line-height: 100%;
+}
+.page-accueil h1 .assoc {
+  color: #777;
 }
 .page-accueil .address {
   color: #666;
   position: relative;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 15px 0 25px 0;
 }
 .page-accueil .propose {
   margin: 15px 0;
@@ -187,11 +194,14 @@ h3 {
    |
    +--------------------------+ 
 */
-.page-tarifs {
-  padding: 15px;
-}
 .page-tarifs .tarif-table {
   margin: 10px 0;
+}
+.page-tarifs tr {
+  height: 70px;
+}
+.page-tarifs tr td {
+  vertical-align: middle;
 }
 .page-tarifs tr.obligatoire td {
   background: #CF374A;
@@ -235,6 +245,20 @@ h3 {
     background: #FBF0F8 url("../images/logo-nb.jpg") no-repeat right 30px top 30px;
   }
 }
+@media screen and (max-width: 990px) {
+  .navbar-nav.mr-auto {
+    background: #CF374A;
+    margin-top: 3px;
+    padding: 15px;
+  }
+  .navbar-nav.mr-auto .nav-item a {
+    color: white;
+  }
+  .navbar-nav.mr-auto .nav-item a.active,
+  .navbar-nav.mr-auto .nav-item a:hover {
+    color: black;
+  }
+}
 @media screen and (max-width: 850px) {
   .page-accueil .central .block-wrapper .block {
     max-width: 75%;
@@ -248,8 +272,8 @@ h3 {
     font-size: 14px;
   }
   .page-accueil h1 {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 24px;
+    xfont-weight: bold;
   }
   .page-accueil .central .block-wrapper {
     background: #FBF0F8;
