@@ -61,13 +61,13 @@ global.get = function (name) {
 
   // Remove all iframe src
   $("#pages .page iframe").each(function () {
-    $(this).attr("src", "")
+    //$(this).attr("src", "")
   })
 
   if ($("#pages .page-" + name).length) {
     $("#pages .page-" + name).show();
     $("#pages .page-" + name + " iframe").each(function () {
-      $(this).attr("src", $(this).attr("data-src"))
+    //  $(this).attr("src", $(this).attr("data-src"))
     })
     global.scrollToAnchor();
   } else {
