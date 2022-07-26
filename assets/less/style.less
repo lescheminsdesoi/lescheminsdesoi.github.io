@@ -1,20 +1,24 @@
 @primary-bg: #FBF0F8;
 @primary-color: #CF374A;
+@star: blue;
 
 body {line-height:120%;}
 .container.main {
   //
 }
-  h3 {
-    color:@primary-color; text-align:center;
-  }
+h3 {
+  color:@primary-color; text-align:center;
+}
 
 #header {
   position:fixed; left:0;top:0; width:100%;
   text-align:center; z-index:2;
-  .navbar-brand {color:@primary-color;}
+  .navbar-brand {
+    color:@primary-color; line-height:100%; padding:0;
+    img {margin-right:10px;}
+  }
   nav.bg-light {
-    background:@primary-bg!important;
+    background:@primary-bg!important; align-items:center;
     border-bottom:2px solid @primary-color;
   }
 }
@@ -42,12 +46,18 @@ body {line-height:120%;}
   margin-top:20px;
   .star {
     position:relative; padding-left:20px; line-height:100%; margin-bottom:4px; font-size:14px; color:#666;
-    .item {color:darkblue; font-weight: bold; position: absolute; top:0; left:0;}
+    .item {color:@star; font-weight: bold; position: absolute; top:0; left:0; font-size:14px;}
   }
 }
-.starin {color:darkblue; font-weight: bold;}
-.final-remark {
-  margin:30px 0; font-size:18px; font-weight:bold; text-align:center;
+.starin {color:@star; font-weight: bold; font-size:14px; position:relative; top:-2px;}
+.block-wrapper {
+  padding:15px 0;
+  .block {
+    background:@primary-bg;
+    padding:15px; border-radius:0px;
+    margin:0px 15px 30px 15px;
+    .title {font-weight:bold; font-size:18px; margin-bottom:15px;}
+  }
 }
 #pages {
   border:1px solid @primary-bg;
@@ -61,6 +71,11 @@ body {line-height:120%;}
     }
   }
 }
+/* +--------------------------+
+   |
+   | PAGE Accueil 
+   |
+   +--------------------------+ */
 .page-accueil {
   h1 {margin:15px 10px 0 10px; line-height:normal; text-align:center; color:@primary-color;}
   .address {color:#666; position:relative; text-align:center; margin-bottom:15px;}
@@ -69,10 +84,10 @@ body {line-height:120%;}
     .block-wrapper {
       background:@primary-bg url("../images/logo.jpg") no-repeat right top;
       background-size:contain;
-      padding:15px 0;
+      padding:15px 0 15px 0;
       .block {
         padding:5px 15px; border-radius:8px; max-width:700px;
-        margin-bottom:25px;
+        margin-bottom:35px; background:none;
         .title {font-weight:bold; font-size:18px;}
       }
     }
@@ -80,42 +95,87 @@ body {line-height:120%;}
       img {max-width:100%; }
     }
   }
-.instructors {
-  margin:40px 15px; border:1px solid #ddd;
-  max-width:100%; width: auto; background:white;
-  line-height:100%;
-  thead {
-    th {font-weight: normal;}
+  .instructors {
+    margin:40px 15px; border:1px solid #ddd;
+    max-width:100%; width: auto; background:white;
+    line-height:100%;
+    thead {
+      th {font-weight: normal;}
+    }
+    thead th {border:none;}
+    .person {font-weight:bold; white-space: nowrap; min-width:130px;}
   }
-  thead th {border:none;}
-  .person {font-weight:bold; white-space: nowrap; min-width:130px;}
-}
+  .final-remark {
+    margin:30px 0; font-size:18px; font-weight:bold; text-align:center;
+  }
 }
 .number {
   text-align:right;
 }
 
-.page-tarifs, .page-contact {
-  padding:15px;
-}
+/* +--------------------------+
+   |
+   | PAGE Tarifs
+   |
+   +--------------------------+ 
+*/
 .page-tarifs {
+  padding:15px;
   .tarif-table {
-    margin-top:30px;
+    margin:10px 0;
   }
   tr.obligatoire {
-    td {background:#aaa;}
+    td {background:@primary-color; color:white;}
   }
 }
+/* +--------------------------+
+   |
+   | PAGE Contact
+   |
+   +--------------------------+ 
+*/
 .page-contact {
-  .block-wrapper {
-    text-align:center;
-    .block {
-      max-width:600px; text-align:left;
-      margin:40px auto;
+  font-size:18px;
+  .e-mail {
+    margin:30px 0;
+  }
+  .address {
+    line-height:150%;
+    margin:30px 0;  
+    .subtitle {color:gray;}
+  }
+}
+/* +--------------------------+
+   |
+   | PAGE Presentation
+   |
+   +--------------------------+ 
+*/
+.page-presentation {
+  .block {min-height:100px;}
+}
+
+@media screen and (max-width: 1200px) {
+  .container {width:100%; max-width:100%; padding:0;}
+  .page-accueil {
+    .central {    
+      .block-wrapper {
+        background:@primary-bg url("../images/logo-nb.jpg") no-repeat right 30px top 30px;
+      }
     }
   }
 }
-
+@media screen and (max-width: 850px) {
+  .page-accueil {
+    .central {    
+      .block-wrapper {
+        .block {
+          max-width:75%;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 450px) {
   #footer {
@@ -133,12 +193,14 @@ body {line-height:120%;}
     .central {    
       .block-wrapper {
         background:@primary-bg;
+        .block {
+          max-width:100%;
+        }
       }
     }
     .instructors {
       margin:30px 10px;
       td {
-        xfont-size:14px;
         display:block;
       }
       .person {border-bottom:none; padding-bottom:10px;}
