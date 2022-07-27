@@ -137,6 +137,12 @@ h3 {
   text-align: center;
   margin: 15px 0 25px 0;
 }
+.page-accueil .address a {
+  color: #666;
+}
+.page-accueil .address a:hover {
+  text-decoration: underline;
+}
 .page-accueil .propose {
   margin: 15px 0;
   text-align: center;
@@ -175,7 +181,7 @@ h3 {
   border: none;
 }
 .page-accueil .instructors .person {
-  font-weight: bold;
+  xfont-weight: bold;
   white-space: nowrap;
   min-width: 130px;
 }

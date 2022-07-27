@@ -84,7 +84,13 @@ h3 {
     line-height:100%;
     .assoc {color:#777;}
   }
-  .address {color:#666; position:relative; text-align:center; margin:15px 0 25px 0;}
+  .address {
+    color:#666; position:relative; text-align:center; margin:15px 0 25px 0;
+    a {
+      color:#666;
+      &:hover {text-decoration:underline;}
+    }
+  }
   .propose {margin:15px 0; text-align:center;}
   .central {    
     .block-wrapper {
@@ -109,7 +115,7 @@ h3 {
       th {font-weight: normal;}
     }
     thead th {border:none;}
-    .person {font-weight:bold; white-space: nowrap; min-width:130px;}
+    .person {xfont-weight:bold; white-space: nowrap; min-width:130px;}
   }
   .final-remark {
     margin:30px 0; font-size:18px; font-weight:bold; text-align:center;
