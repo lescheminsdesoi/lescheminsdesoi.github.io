@@ -98,8 +98,8 @@ global.get = function (name) {
     $("#pages .page-" + name + " iframe").each(function () {
     //  $(this).attr("src", $(this).attr("data-src"))
     })
-    global.scrollToAnchor();
     $('html, body').animate({scrollTop: 0}, 0);
+    global.scrollToAnchor();
   } else {
     let cls = 'page-' + name;
     $("#pages").append('<div class="page ' + cls + '"></div>');
