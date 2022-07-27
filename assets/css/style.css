@@ -190,6 +190,52 @@ h3 {
 }
 /* +--------------------------+
    |
+   | Modal Definitions
+   |
+   +--------------------------+ 
+*/
+.pop {
+  cursor: pointer;
+  color: #CF374A;
+}
+.pop:hover {
+  xopacity: 0.7;
+  text-decoration: underline;
+}
+#modalDefinitions .modal-header {
+  position: relative;
+  padding-right: 20px;
+}
+#modalDefinitions .modal-header .close {
+  position: absolute;
+  top: 22px;
+  right: 17px;
+}
+#modalDefinitions .subtitle {
+  color: gray;
+  line-height: 100%;
+}
+#modalDefinitions .source {
+  margin-top: 15px;
+  font-size: 12px;
+  color: gray;
+}
+@media screen and (max-width: 500px) {
+  #modalDefinitions .modal-header .modal-title {
+    font-size: 20px;
+  }
+  #modalDefinitions .modal-header .modal-title .subtitle {
+    font-size: 12px;
+  }
+  #modalDefinitions .modal-header .close {
+    top: 19px;
+  }
+  #modalDefinitions .modal-body {
+    font-size: 14px;
+  }
+}
+/* +--------------------------+
+   |
    | PAGE Tarifs
    |
    +--------------------------+ 

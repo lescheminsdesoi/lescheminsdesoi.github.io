@@ -38,6 +38,35 @@ global.setup = function () {
   })
 }
 
+global.definitions = function (cls) {
+  $("." + cls + " .pop").on("click", function () {
+    let word = $(this).attr("data-word");
+    let area = $(".definitions ." + word);
+    if (area.length == 0) {
+      return;
+    }
+    let title = global.definitionField(area, "title");
+    let subtitle = global.definitionField(area, "subtitle");
+    let body = global.definitionField(area, "body");
+    let source = global.definitionField(area, "source");
+    if (source != "") {
+      source = "Source : " + source;
+    }
+
+    $("#modalDefinitions .modal-title").html(title);
+    $("#modalDefinitions .subtitle").html(subtitle);
+    $("#modalDefinitions .modal-body .body").html(body);
+    $("#modalDefinitions .modal-body .source").html(source);
+    $("#modalDefinitions").modal();
+  })
+}
+global.definitionField = function (dom, name) {
+  if (dom.find("." + name).length) {
+    return dom.find("." + name).html();
+  }
+  return "";
+}
+
 global.scrollToAnchor = function () {
   if (!global.gotoAnchor) {
     return;
@@ -70,6 +99,7 @@ global.get = function (name) {
     //  $(this).attr("src", $(this).attr("data-src"))
     })
     global.scrollToAnchor();
+    $('html, body').animate({scrollTop: 0}, 0);
   } else {
     let cls = 'page-' + name;
     $("#pages").append('<div class="page ' + cls + '"></div>');
@@ -81,6 +111,7 @@ global.get = function (name) {
       global.setMore(name)
       global.scrollToAnchor();
       global.updateTitles(name);
+      global.definitions(cls);
     })
   }
 
