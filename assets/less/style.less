@@ -148,11 +148,11 @@ h3 {
   }
   @media screen and (max-width: 500px) {
     .modal-header {
-    .modal-title {
-      font-size: 20px;
-      .subtitle {font-size:12px;}
-    }
-    .close {top:19px;}
+      .modal-title {
+        font-size: 20px;
+        .subtitle {font-size:12px;}
+      }
+      .close {top:19px;}
     }
     .modal-body {
       font-size:14px;
@@ -208,6 +208,19 @@ h3 {
 .page-presentation {
   .block {
     min-height:100px;
+    .with-icon {
+      padding-right:130px; position: relative;
+      .icon {
+        position: absolute; top:0; right:0;
+        img {border-radius:50%; width:110px;}
+      }
+      @media screen and (max-width: 450px) {   
+        padding-right:70px; 
+        .icon {     
+          img {width:60px;}
+        }
+      }
+    }
     .item {margin-bottom:25px;}
   }
 }

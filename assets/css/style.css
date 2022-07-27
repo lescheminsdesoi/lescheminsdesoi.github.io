@@ -291,6 +291,27 @@ h3 {
 .page-presentation .block {
   min-height: 100px;
 }
+.page-presentation .block .with-icon {
+  padding-right: 130px;
+  position: relative;
+}
+.page-presentation .block .with-icon .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-presentation .block .with-icon .icon img {
+  border-radius: 50%;
+  width: 110px;
+}
+@media screen and (max-width: 450px) {
+  .page-presentation .block .with-icon {
+    padding-right: 70px;
+  }
+  .page-presentation .block .with-icon .icon img {
+    width: 60px;
+  }
+}
 .page-presentation .block .item {
   margin-bottom: 25px;
 }
