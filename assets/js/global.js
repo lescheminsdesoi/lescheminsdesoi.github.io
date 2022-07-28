@@ -77,7 +77,7 @@ global.scrollToAnchor = function () {
 
   //setTimeout(function () {
         $('html, body').animate({
-          scrollTop: $("#" + global.gotoAnchor).offset().top
+    scrollTop: $("#" + global.gotoAnchor).offset().top - 70
         }, 2000);
   //}, 200)
 }
@@ -119,6 +119,8 @@ global.get = function (name) {
 }
 global.updateTitles = function (name) {
   let year = new Date().getFullYear();
+  $(".current-year").html(year)
+  /*
   switch (name) {
     case 'tarifs':
       let title = $(".page-tarifs h3").html();
@@ -126,6 +128,7 @@ global.updateTitles = function (name) {
       $(".page-tarifs h3").html(title)
       break;
   }
+  */
 }
 
 global.setMore = function (name) {

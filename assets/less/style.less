@@ -26,21 +26,36 @@ h3 {
 }
 #footer {
   position:fixed; left:0;bottom:0; width:100%; background:black; color:white;
-  text-align:center; z-index:3;
+  text-align:center; z-index:3; 
+  .inner {
+    display:flex; flex-direction:row; flex-wrap:wrap; align-items:center;
+    justify-content: space-between; margin:0 10px;height:65px;
+    @media screen and (max-width: 500px) {
+      flex-direction:column; height:80px; justify-content:space-around; 
+    }
+  }
+  .copyright {
+    font-size:14px;
+  }
   .link-wrapper {
     display:inline-block;
-    .links {
-      line-height:30px; padding:15px 0;
-      text-align:center;
+    .links {      
       display:flex; flex-direction:row; flex-wrap: nowrap;
       .item {
-        margin:0 10px;  
+        margin:0 15px;  
         &.contact {
           display:flex; flex-direction:row;
           align-items: center; margin-right:10px;
           i {margin-right:5px;}
         }
       }    
+    }
+  }
+  .legales {
+    .item {
+      font-size:14px; line-height:120%;
+      &:after {content:"|"; margin-left:5px;}
+      &:last-child:after {content:none;}
     }
   }
 }
@@ -196,13 +211,13 @@ h3 {
    |
    +--------------------------+ 
 */
-.page-contact {
-  font-size:18px;
+.page-contact {  
   .e-mail {
+    font-size:18px;
     margin:30px 0;
   }
   .address {
-    line-height:150%;
+    line-height:normal;
     margin:30px 0;  
     .subtitle {color:gray;}
   }
@@ -235,6 +250,16 @@ h3 {
     }
     .item {margin-bottom:25px;}
   }
+}
+/* +--------------------------+
+   |
+   | PAGE Legales/Privacy
+   |
+   +--------------------------+ 
+*/
+.page-privacy, .page-legales {
+  line-height:160%;
+  .address {line-height:normal;}  
 }
 
 @media screen and (max-width: 1200px) {
